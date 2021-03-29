@@ -1,0 +1,58 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "jsx-a11y",
+    "react",
+    "react-hooks"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "camelcase": "error",
+    "dot-notation": "error",
+    "eqeqeq": [
+      "error",
+      "allow-null"
+    ],
+    "jsx-a11y/click-events-have-key-events": "off",
+    "no-caller": "error",
+    "no-console": "error",
+    "no-multi-str": "error",
+    "react/sort-prop-types": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "strict": "error",
+    "yoda": "error"
+  },
+  "overrides": [
+    {
+      "files": [
+        ".storybook/**/*.{js,mjs}"
+      ],
+      "env": {
+        "node": true
+      }
+    }
+  ]
+}
